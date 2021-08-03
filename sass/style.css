@@ -153,6 +153,13 @@ body {
   letter-spacing: 1px;
 }
 
+@media screen and (max-width: 767px) {
+  body {
+    font-size: 18px;
+    line-height: 30px;
+  }
+}
+
 .bookBtn {
   font-family: var(--fontBold);
   font-size: 18px;
@@ -164,6 +171,13 @@ body {
 .discover {
   font-size: 22px;
   text-transform: uppercase;
+  color: var(--blue-color);
+}
+
+@media screen and (max-width: 767px) {
+  .discover {
+    font-size: 18px;
+  }
 }
 
 .padding-offset {
@@ -220,6 +234,73 @@ body {
   }
   .leftHeading {
     padding-left: 10px;
+  }
+}
+
+.experience {
+  background: url(../images/background-waves.png) no-repeat;
+  background-position-x: right;
+  background-position-y: 85%;
+  background-size: 120px;
+}
+
+.experience .experienceText {
+  background-color: var(--white-color);
+  width: 400px;
+  padding-bottom: 10px;
+  position: absolute;
+  text-align: left;
+  top: -10%;
+  right: 0%;
+}
+
+.experience .discover {
+  position: absolute;
+  bottom: 45px;
+  margin: 0px -40px;
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+}
+
+@media screen and (max-width: 1199px) {
+  .experience {
+    background-position-y: 60px;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .experience {
+    background-position-y: 120px;
+  }
+  .experience .experienceText {
+    top: -3%;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .experience {
+    background-position-y: 135px;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .experience .experienceText {
+    position: relative;
+    padding: 10px;
+    left: 0;
+    top: 0;
+    width: auto;
+  }
+  .experience .container {
+    text-align: left !important;
+  }
+  .experience .discover {
+    position: relative;
+    bottom: 0px;
+    margin: 0px 0px;
+    -webkit-transform: none;
+            transform: none;
+    text-align: right !important;
   }
 }
 
