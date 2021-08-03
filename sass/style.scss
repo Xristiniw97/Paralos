@@ -104,22 +104,27 @@ h1,h2,h3 {
     font-weight: 400;
     color: var(--blue-color);
     letter-spacing: 1px;
-    margin-bottom: 70px;
+    
 }
 
 h1 {
     font-size: 115px;
     line-height: 120px;
+    margin-bottom: 70px;
 }
 
 h2 {
     font-size: 64px;
     line-height: 80px;
+    margin-bottom: 70px;
 }
 
 h3 {
+    font-family: var(--fontBold);
     font-size: 25px;
     line-height: 38px;
+    color: var(--blue-color);
+    margin-bottom: 25px;
 }
 
 //RESPONSIVE HEADINGS 
@@ -200,27 +205,27 @@ body {
     }
 }
 
-.padding-offset {
-    padding: 0px 150px;
-}
+// .padding-offset {
+//     padding: 0px 150px;
+// }
 
-@media screen and (max-width: 1199px) {
-    .padding-offset {
-        padding: 0px 80px;
-    }
-}
+// @media screen and (max-width: 1199px) {
+//     .padding-offset {
+//         padding: 0px 80px;
+//     }
+// }
 
-@media screen and (max-width: 991px) {
-    .padding-offset {
-        padding: 0px 20px;
-    }
-}
+// @media screen and (max-width: 991px) {
+//     .padding-offset {
+//         padding: 0px 20px;
+//     }
+// }
 
-@media screen and (max-width: 480px) {
-    .padding-offset {
-        padding: 0px 0px;
-    }
-}
+// @media screen and (max-width: 480px) {
+//     .padding-offset {
+//         padding: 0px 0px;
+//     }
+// }
 
 // POSITIONING HEADINGS 
 .rightHeading {
@@ -417,6 +422,68 @@ body {
     .hospitalityCategories .hospitalityCategoriesLogo {
         width: 130px;
     }
+}
+
+
+// DISCOVER SECTION 
+// TABS SECTION 
+#tabs .nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
+    opacity: 0;
+    visibility: hidden;
+    background: none;
+    border: none;
+}
+
+#tabs .nav-tabs .nav-link {
+    color: blue;
+    font-size: 20px;
+    position: relative;
+    z-index: 10;
+    transform: rotate(-90deg);
+} 
+
+#tabs .nav-tabs {
+    border:none;
+}
+
+#tabs .fade {
+    transition: opacity .45s linear;
+}
+
+#tabs .discoverCrete-box {
+    position: absolute;
+    text-align: left;
+    width:400px;
+    background: white;
+    z-index: 2;
+}
+
+#tabs .discoverCrete-box p {
+    margin: 0;
+}
+
+#tabs #nav-heraklion .discoverCrete-box{
+    top: 0px;
+    right: -80px;
+}
+
+#tabs #nav-crete .discoverCrete-box {
+    top: 0px;
+    left: -105px;
+}
+
+#tabs #nav-galini .discoverCrete-box {
+    top: 0px;
+    left: 125px;
+}
+
+#tabs #nav-herso .discoverCrete-box {
+    top: 0px;
+    right: 145px;
+}
+
+@media screen (min-width:) {
+    
 }
 
 
