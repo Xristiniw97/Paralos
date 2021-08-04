@@ -15,11 +15,11 @@
 // REGULAR
 @font-face {
     font-family: 'Zeitung Pro Regular';
-    src: url('../fonts/ZeitungPro.eot');
-    src: url('../fonts/ZeitungPro.eot?#iefix') format('embedded-opentype'),
-        url('../fonts/ZeitungPro.woff2') format('woff2'),
-        url('../fonts/ZeitungPro.woff') format('woff'),
-        url('../fonts/ZeitungPro.ttf') format('truetype');
+    src: url('../fonts/ZeitungPro-Regular.eot');
+    src: url('../fonts/ZeitungPro-Regular.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/ZeitungPro-Regular.woff2') format('woff2'),
+        url('../fonts/ZeitungPro-Regular.woff') format('woff'),
+        url('../fonts/ZeitungPro-Regular.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
@@ -60,6 +60,7 @@
     --white-color: #fff;
     --light-white: #f1f1f2;
     --white-minOpacity: rgba(241,241,242, 0.5);
+    --rotate90degLeft: rotate(-90deg);
 }
 
 /* BASIC SETTINGS  */
@@ -103,7 +104,7 @@ h1,h2,h3 {
     font-family: var(--fontRegular);
     font-weight: 400;
     color: var(--blue-color);
-    letter-spacing: 1px;
+    letter-spacing: 5px;
     
 }
 
@@ -129,8 +130,12 @@ h3 {
 
 //RESPONSIVE HEADINGS 
 @media screen and (max-width:1199px) {
-    h1,h2,h3 {
+    h1,h2 {
         margin-bottom: 40px;
+    }
+
+    h3 {
+        margin-bottom: 10px;
     }
     
     h1 {
@@ -175,7 +180,7 @@ body {
     line-height: 38px;
     color: var(--blue-color);
     text-align: left;
-    letter-spacing: 1px;
+    letter-spacing: 1.5px;
 }
 
 @media screen and (max-width: 767px) {
@@ -194,9 +199,13 @@ body {
 }
 
 .discover {
+    position: absolute;
+    bottom: 45px;
     font-size: 22px;
     text-transform: uppercase;
     color: var(--blue-color);
+    margin: 0px -40px;
+    transform: var(--rotate90degLeft);
 }
 
 @media screen and (max-width: 767px) {
@@ -281,10 +290,8 @@ body {
 }
 
 .experience .discover {
-    position: absolute;
     bottom: 45px;
-    margin: 0px -40px;
-    transform: rotate(-90deg);
+  
 }
 
 //RESPONSIVE EXPERIENCE SECTION
@@ -427,6 +434,11 @@ body {
 
 // DISCOVER SECTION 
 // TABS SECTION 
+
+.discoverCrete {
+    padding-top: 60px;
+    overflow-x: hidden;
+}
 #tabs .nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
     opacity: 0;
     visibility: hidden;
@@ -435,11 +447,13 @@ body {
 }
 
 #tabs .nav-tabs .nav-link {
-    color: blue;
+    color: var(--blue-color);
     font-size: 20px;
     position: relative;
     z-index: 10;
-    transform: rotate(-90deg);
+    border: none;
+    padding: 10px 20px;
+    transform: var(--rotate90degLeft);
 } 
 
 #tabs .nav-tabs {
@@ -452,6 +466,7 @@ body {
 
 #tabs .discoverCrete-box {
     position: absolute;
+    top: 0px;
     text-align: left;
     width:400px;
     background: white;
@@ -463,28 +478,113 @@ body {
 }
 
 #tabs #nav-heraklion .discoverCrete-box{
-    top: 0px;
     right: -80px;
 }
 
 #tabs #nav-crete .discoverCrete-box {
-    top: 0px;
     left: -105px;
 }
 
 #tabs #nav-galini .discoverCrete-box {
-    top: 0px;
     left: 125px;
 }
 
 #tabs #nav-herso .discoverCrete-box {
-    top: 0px;
     right: 145px;
 }
 
-@media screen (min-width:) {
-    
+.discoverCrete .discover{
+    bottom: 65px;
 }
+
+@media screen and (max-width:1199px) and (min-width: 992px) {
+    #tabs .discoverCrete-box {
+        width: 280px;
+        font-size: 16px;
+        line-height: 32px;
+    }
+    
+    #tabs #nav-crete .discoverCrete-box {
+        left: 0px;
+    }
+    #tabs #nav-galini .discoverCrete-box {
+        left: 200px;
+    }
+    #tabs #nav-herso .discoverCrete-box {
+        right: 200px;
+    }
+    #tabs #nav-heraklion .discoverCrete-box {
+        right: 0px;
+    }
+}
+
+@media screen and (max-width:991px) and (min-width: 768px) {
+    #tabs .discoverCrete-box {
+        width: 280px;
+        font-size: 14px;
+        line-height: 30px;
+        bottom: 0px;
+        top: auto;
+    }
+    #tabs .nav-tabs .nav-link {
+        font-size: 18px;
+        padding: 10px 12px;
+    }
+    
+    #tabs #nav-heraklion .discoverCrete-box{
+        left: 0;
+     }
+     
+     #tabs #nav-crete .discoverCrete-box {
+         left: 0;
+     }
+     
+     #tabs #nav-galini .discoverCrete-box {
+         left: 0;
+     }
+     
+     #tabs #nav-herso .discoverCrete-box {
+         left: 0;
+     }
+
+     #tabs .nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+@media screen and (max-width: 767px){
+    #tabs .nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
+        opacity: 1;
+        visibility: visible;
+    }
+    #tabs .discoverCrete-box {
+        width: auto;
+        font-size: 16px;
+        line-height: 32px;
+        position: static;
+        padding: 10px;
+    }
+    #tabs .nav-tabs .nav-link {
+        font-size: 16px;
+        padding: 0px
+    }
+}
+
+@media screen and (max-width: 480px) {
+    #tabs .nav-tabs .nav-link {
+        font-size: 14px;
+        line-height: 16px;
+        width: 25%;
+        
+    }
+
+    #tabs .nav {
+        flex-wrap: nowrap;
+        // padding: 0px 10px;
+    }
+}
+
 
 
 // OUR HOTELS SECTION 
