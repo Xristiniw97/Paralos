@@ -1,4 +1,24 @@
+
+
 $(document).ready(function() {
+
+  
+      // .scroll() creates an event when the user scrolls
+      $(window).scroll(function () {
+
+        // .scrollTop() retrieves vertical position of the scroll bar for the first element in a set of matched elements
+        var scroll = $(window).scrollTop();
+        var navOverlay=$('.overlay-nav');
+            
+
+        if (scroll > 200 || navOverlay.hasClass("reveal-nav")) {
+            $('#main-navbar').addClass('displayNav');
+        } else {
+            $('#main-navbar').removeClass('displayNav');
+        }
+    });
+
+
     $('.magazineCarousel').owlCarousel({
       loop: false,
       responsiveClass: true,
@@ -18,5 +38,11 @@ $(document).ready(function() {
           items: 3
         }
       }
-    })
+    });
+
   })
+
+
+
+
+ 
