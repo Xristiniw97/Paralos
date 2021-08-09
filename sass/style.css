@@ -1320,7 +1320,42 @@ a:hover, a:focus {
   background: transparent;
   color: var(--blue-color);
   font-size: 22px;
+  padding-left: 10px;
+  display: none !important;
   border: none;
+  cursor: pointer;
+}
+
+.bookingRow .field {
+  cursor: pointer;
+}
+
+.bookingRow label {
+  cursor: pointer;
+}
+
+.bookingRow .rotated-field {
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+  -webkit-transition: all .3s linear;
+  transition: all .3s linear;
+}
+
+.bookingRow .rotated-field input {
+  display: none;
+}
+
+.bookingRow .hover-removeRotation select {
+  display: inline-block !important;
+}
+
+.bookingRow .hover-removeRotation input {
+  display: inline-block !important;
+}
+
+.bookingRow .hover-removeRotation {
+  -webkit-transform: rotate(0deg);
+          transform: rotate(0deg);
 }
 
 /*SCROLL UP */
