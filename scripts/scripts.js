@@ -19,6 +19,17 @@ $(document).ready(function() {
     });
 
 
+    $('.introCarousel').owlCarousel({
+      loop: false,
+      responsiveClass: true,
+      margin:0,
+      nav: true,
+      navText: ["", ""],
+      dots: false,
+      items: 1
+    });
+
+
     $('.magazineCarousel').owlCarousel({
       loop: false,
       responsiveClass: true,
@@ -39,6 +50,20 @@ $(document).ready(function() {
         }
       }
     });
+
+
+    /*Scroll to top*/
+    $(window).scroll(function(){
+      if ($(this).scrollTop() > 100) {
+    $('.scrollup').fadeIn();
+    } else {
+      $('.scrollup').fadeOut();
+    }
+    });
+    $('.scrollup').click(function(){
+    $("html, body").animate({ scrollTop: 0 }, 600);
+            return false;
+    }); 
 
   })
 

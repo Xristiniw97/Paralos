@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paralos Hospitality</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" 
+	    integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css"/> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.1.25/jquery.fancybox.min.css"/>  
+    <link rel="stylesheet" href="sass/style.css">
+</head>
+<body>
+    
+
+<!-- BOOKING ROW   -->
+    <div class="bookingRow">
+        <div class="container bg d-none d-md-block">
+            <form class="form-inline justify-content-between" role="form" method="post" target="_blank">
+                <div class="field form-group flex-column align-items-start">
+                  
+                    <select class="form-control"> 
+                        <option selected="" class="bookBtn" disabled>all hotels</option>
+                        <option>IRINI MARE</option>
+                        <option>KOSTAS MARE</option>
+                        <option>LIFESTYLE BEACH MARE</option>
+                        <option>VENUS MARE</option>
+                    </select>
+                </div>
+                <div class="field form-group has-feedback">
+                    <!-- <label>check in</label> -->
+                    <input type="text" name="checkin" id="checkin" class="form-control" placeholder="check-in">
+                </div>
+                <div class="field form-group flex-column align-items-start">
+                    <!-- <label>nights</label> -->
+                    <select class="form-control" name="Nights"> 
+                        <option selected="" disabled>nights</option>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                        <option>6</option>
+                        <option>7</option>
+                        <option>8</option>
+                        <option>9</option>
+                        <option>10</option>
+                    </select>
+                </div>
+                <div class="field form-group flex-column align-items-start ">
+                    <!-- <label>adults</label> -->
+                    <select class="form-control" name="adults"> 
+                        <option selected="" disabled>adults</option>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                    </select>
+                </div>
+                <div class="field form-group">
+                    <a href="#" type="submit" class="bookBtn">BOOK NOW</button>
+                </div>
+            </form>   
+        </div>   
+    </div>
+
+
+    <!-- JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.1.25/jquery.fancybox.min.js"></script> 
+    <script src="./scripts/scripts.js"></script>
+    
+</body>
+</html>

@@ -11,30 +11,36 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.1.25/jquery.fancybox.min.css"/>  
     <link rel="stylesheet" href="sass/style.css">
-</head>
-<body>
+    <style>
+
+    </style>
     
+<body>
 
-    <!-- HEADER MENU  -->
-
-    <header class="header" id="header">
+    <!-- MAIN NAVBAR  -->
+    <div class="navbar fixed-top main-navbar" id="main-navbar">
         <a href="index.html"><img src="./images/Logos/Paealos-BlueLogoSmall.png" alt="Paralos Hospitality" class="miniLogo"></a>
         <a href="#" class="hamburger"></a>
-        <nav>
-          <ul class="menu">
-            <li><a href="#" class="menu-item">Link 1</a></li>
-            <li><a href="#" class="menu-item">Link 2</a></li>
-            <li><a href="#" class="menu-item">Link 3</a></li>
-            <li><a href="#" class="menu-item">Link 4</a></li>
-            <li><a href="#" class="menu-item">Link 5</a></li>
-          </ul>
+
+        <nav class="overlay-nav">
+            <ul class="menu">
+                <li><a href="#" class="menu-item">Link 1</a></li>
+                <li><a href="#" class="menu-item">Link 2</a></li>
+                <li><a href="#" class="menu-item">Link 3</a></li>
+                <li><a href="#" class="menu-item">Link 4</a></li>
+                <li><a href="#" class="menu-item">Link 5</a></li>
+            </ul>
         </nav>
-    </header>
+    </div>
 
 
-    <section id="welcome" style="height: 100000px;"></section>
+    <section style="height:100vh;background: white;">
 
-  
+    </section>
+    <section id="welcome" style="height: 100000px; background: white; margin-top: 100px;"></section>
+   
+
+
 
     <!-- JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -42,42 +48,18 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.1.25/jquery.fancybox.min.js"></script> 
-    <script id="rendered-js" >
-        const hamburger = document.querySelector('.hamburger');
-    const nav = document.querySelector('nav');
-    const menu = document.querySelector('.menu');
-  
-    hamburger.addEventListener('click', function () {
+    <script src="./scripts/scripts.js"></script>
+    <script>
+        // MENU 
+const hamburger = document.querySelector('.hamburger');
+const nav = document.querySelector('.overlay-nav');
+const menu = document.querySelector('.menu');
+
+hamburger.addEventListener('click', function () {
     this.classList.toggle('close');
     nav.classList.toggle('reveal-nav');
     menu.classList.toggle('reveal-items');
-    });
-       
-        //# sourceURL=pen.js
-
-
-
-           // .scroll() creates an event when the user scrolls
-   $(window).scroll(function () {
-  
-  // .scrollTop() retrieves vertical position of the scroll bar for the first element in a set of matched elements
-  var scroll = $(window).scrollTop();
-
-  var objectSelect = $('#welcome');
-
-  // .offset() retrieves current position of element relative to document
-  var objectPosition = objectSelect.offset().top;
-
-  if (scroll > objectPosition) {
-    $('#header').addClass('displayNav');
-    $('#header').addClass('fixed-top');
-  } else {
-    $('#header').removeClass('displayNav');
-    $('#header').removeClass('fixed-top');
-  }
 });
     </script>
- 
- 
 </body>
 </html>
