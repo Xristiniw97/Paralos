@@ -19,29 +19,30 @@
     <div class="bookingRow">
         <div class="container bg d-none d-md-block">
             <form class="form-inline justify-content-between" role="form" method="post" target="_blank">
-                <div class="field form-group flex-column align-items-start">
-                  
-                    <select class="form-control"> 
-                        <option selected="" class="bookBtn" disabled>all hotels</option>
+                <div class="field form-group flex-column align-items-start rotated-field">
+                  <label for="hotelSel">Choose hotel</label>
+
+                    <select class="form-control" id="hotelSel"> 
+                        <option>All Hotels</option>
                         <option>IRINI MARE</option>
                         <option>KOSTAS MARE</option>
                         <option>LIFESTYLE BEACH MARE</option>
                         <option>VENUS MARE</option>
                     </select>
                 </div>
-                <div class="field form-group has-feedback">
-                    <!-- <label>check in</label> -->
-                    <input type="text" name="checkin" id="checkin" class="form-control" placeholder="check-in">
+
+                <div class="field form-group flex-column align-items-start has-feedback rotated-field">
+                    <label for="checkin">check-in</label>
+                    <input type="text" name="checkin" id="checkin" class="form-control">
                 </div>
-                <div class="field form-group flex-column align-items-start">
-                    <!-- <label>nights</label> -->
+                <div class="field form-group flex-column align-items-start rotated-field">
+                    <label for="Nights">nights</label>
                     <select class="form-control" name="Nights"> 
-                        <option selected="" disabled>nights</option>
-                        <option>1</option>
+                         <option>1</option>
                         <option>2</option>
                         <option>3</option>
                         <option>4</option>
-                        <option>5</option>
+                        <option selected>5</option>
                         <option>6</option>
                         <option>7</option>
                         <option>8</option>
@@ -49,18 +50,17 @@
                         <option>10</option>
                     </select>
                 </div>
-                <div class="field form-group flex-column align-items-start ">
-                    <!-- <label>adults</label> -->
+                <div class="field form-group flex-column align-items-start rotated-field">
+                    <label for="adults">adults</label>
                     <select class="form-control" name="adults"> 
-                        <option selected="" disabled>adults</option>
                         <option>1</option>
-                        <option>2</option>
+                        <option selected>2</option>
                         <option>3</option>
                         <option>4</option>
                         <option>5</option>
                     </select>
                 </div>
-                <div class="field form-group">
+                <div class="field form-group rotated-field">
                     <a href="#" type="submit" class="bookBtn">BOOK NOW</button>
                 </div>
             </form>   
@@ -76,5 +76,30 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.1.25/jquery.fancybox.min.js"></script> 
     <script src="./scripts/scripts.js"></script>
     
+    <script>
+        $(document).ready(function() {
+
+            $("select[name=hotelSel]").change(function () {
+                var url=$(this).closest("form").attr("action", $(this).val());
+            });
+
+            $('.rotated-field').each(function(){
+               
+               $(this).hover(
+                    function() {
+                        $(this).addClass( "hover-removeRotation" );
+                        //  if ($(this).has("select")){
+                        //    var selectId = $(this).find("select").attr('id');
+                       // }
+                   
+                    }, function() {
+                       // $( this ).parent().removeClass( "hover-removeRotation" );
+                    }
+                );
+            });
+
+    });
+
+    </script>
 </body>
 </html>

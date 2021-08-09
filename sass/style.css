@@ -161,20 +161,20 @@ body {
   letter-spacing: 1.5px;
   background: url(../images/background-big.png) no-repeat;
   background-position-x: 700px;
-  background-position-y: -350px;
+  background-position-y: 0px;
 }
 
 @media screen and (max-width: 1199px) {
   body {
     background-position-x: 500px;
-    background-position-y: -580px;
+    background-position-y: -140px;
   }
 }
 
 @media screen and (max-width: 991px) {
   body {
     background-position-x: 300px;
-    background-position-y: -800px;
+    background-position-y: -700px;
   }
 }
 
@@ -184,15 +184,13 @@ body {
     line-height: 30px;
     background-size: 800px;
     background-position-x: 300px;
-    background-position-y: -80px;
+    background-position-y: 0px;
   }
 }
 
 @media screen and (max-width: 480px) {
   body {
-    background-size: 800px;
     background-position-x: 20px;
-    background-position-y: 0px;
   }
 }
 
