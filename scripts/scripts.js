@@ -29,6 +29,17 @@ $(document).ready(function() {
       items: 1
     });
 
+    $('.genericCarousel').owlCarousel({
+      loop: false,
+      responsiveClass: true,
+      margin:0,
+      nav: true,
+      navText: ["", ""],
+      dots: false,
+      items: 1
+    });
+
+   
 
     $('.magazineCarousel').owlCarousel({
       loop: false,
