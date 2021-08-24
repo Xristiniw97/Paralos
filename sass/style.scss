@@ -99,7 +99,7 @@ ul li {
 }
 
 // HEADINGS 
-h1,h2,h3 {
+h1,h2,h3,.h1,.h2 {
     text-transform: uppercase;
     font-family: var(--fontRegular);
     font-weight: 400;
@@ -108,13 +108,13 @@ h1,h2,h3 {
     
 }
 
-h1 {
+h1,.h1 {
     font-size: 115px;
     line-height: 120px;
     margin-bottom: 70px;
 }
 
-h2 {
+h2,.h2 {
     font-size: 64px;
     line-height: 80px;
     margin-bottom: 70px;
@@ -130,7 +130,7 @@ h3 {
 
 //RESPONSIVE HEADINGS 
 @media screen and (max-width:1199px) {
-    h1,h2 {
+    h1,.h1,h2,.h2 {
         margin-bottom: 40px;
     }
 
@@ -138,36 +138,36 @@ h3 {
         margin-bottom: 10px;
     }
     
-    h1 {
+    h1,.h1 {
         font-size: 70px;
         line-height: 80px;
     }
     
-    h2 {
+    h2,.h2 {
         font-size: 50px;
         line-height: 60px;
     }
 }
 
 @media screen and (max-width:575px) {
-    h1 {
+    h1,.h1 {
         font-size: 40px;
         line-height: 50px;
     }
     
-    h2 {
+    h2,.h2 {
         font-size: 35px;
         line-height: 45px;
     }   
 }
 
 @media screen and (max-width:320px) {
-    h1 {
+    h1,.h1 {
         font-size: 30px;
         line-height: 40px;
     }
     
-    h2 {
+    h2,.h2 {
         font-size: 28px;
         line-height: 38px;
     }  
@@ -1524,7 +1524,7 @@ a.scrollup, a:hover.scrollup,a.scrollup::before {
 
 
 
-// TEXT PAGES
+// MAIN PAGES
 .viewAlsoSection {
     background: url(../images/background-waves.png) no-repeat;
     background-size: 100px;
@@ -1727,4 +1727,66 @@ a.scrollup, a:hover.scrollup,a.scrollup::before {
         background-position-y: top;
     }
 
+}
+
+
+.hotelsPage {
+    position: relative;
+}
+
+
+
+.hotelsPage .hotel-irini {
+    background: url(../images/Logos/I.svg) no-repeat;
+}
+
+.hotelsPage .hotel-venus {
+    background: url(../images/Logos/V.svg) no-repeat;  
+}
+
+.hotelsPage .hotel-kostas {
+    background: url(../images/Logos/K.svg) no-repeat;
+}
+
+.hotelsPage .hotel-lifestyle {
+    background: url(../images/Logos/L.svg) no-repeat;
+}
+
+.hotelsPage .hotel {
+    background-position-x: -30px;
+    background-position-y: center;
+    margin-bottom: 17%;
+}
+
+.hotelsPage .revertHotel {
+    background-position-x: 105%;
+    background-position-y: center;
+    margin-bottom: 17%;
+}
+
+.hotelsPage .hotel-box {
+    background: var(--white-color);
+    width: 60%;
+    position: absolute;
+    right: -200px;
+    bottom: -25%;
+}
+
+.hotelsPage .revertHotel .hotel-box {
+    left: -200px;
+}
+
+.hotelsPage .hotel-box .h1{
+    margin-bottom: 0;
+    height: 190px;
+    line-height: 95px;
+}
+
+.hotelsPage .hotel .discover {
+    right: -40px;
+    bottom: 200px;
+}
+
+.hotelsPage .revertHotel .discover {
+    right: -40px;
 }
