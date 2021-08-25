@@ -186,15 +186,9 @@ body.mainPages {
   body {
     font-size: 18px;
     line-height: 30px;
-    background-size: 800px;
-    background-position-x: 300px;
-    background-position-y: 0px;
-  }
-}
-
-@media screen and (max-width: 480px) {
-  body {
-    background-position-x: 20px;
+    background-size: 100%;
+    background-position-x: right;
+    background-position-y: top;
   }
 }
 
@@ -438,6 +432,209 @@ a:hover, a:focus {
   transition-delay: 0.4s;
 }
 
+.header {
+  padding: 20px 30px 0px;
+}
+
+.header .languages {
+  font-family: var(--fontLight);
+}
+
+.header .languages a {
+  font-size: 18px;
+  color: var(--blue-color);
+}
+
+.header .header_btn {
+  position: relative;
+}
+
+.header .header_btn::after, .header .header_btn::before {
+  position: absolute;
+  content: '';
+  height: 10px;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  width: 50%;
+  text-align: center;
+  background: url(../images/menu-wave.png) no-repeat;
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+.header .header_btn::before {
+  top: 0px;
+}
+
+.header .header_btn::after {
+  bottom: -10px;
+}
+
+.header .bigLogo {
+  width: 80px;
+}
+
+@media screen and (max-width: 991px) {
+  .header .bigLogo {
+    width: 65px;
+  }
+}
+
+.bookingRow form {
+  color: var(--blue-color);
+  font-family: var(--fontBold);
+  font-size: 22px;
+  border: none;
+}
+
+.bookingRow form select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none !important;
+  outline: 0;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  border: 0 !important;
+  background: transparent;
+  color: var(--blue-color);
+  font-size: 22px;
+  padding-left: 10px;
+  display: none !important;
+  border: none;
+  cursor: pointer;
+}
+
+.bookingRow .field {
+  cursor: pointer;
+}
+
+.bookingRow label {
+  cursor: pointer;
+}
+
+.bookingRow .rotated-field {
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+  -webkit-transition: all .3s linear;
+  transition: all .3s linear;
+}
+
+.bookingRow .rotated-field input {
+  display: none;
+}
+
+.bookingRow .hover-removeRotation select {
+  display: inline-block !important;
+}
+
+.bookingRow .hover-removeRotation input {
+  display: inline-block !important;
+}
+
+.bookingRow .hover-removeRotation {
+  -webkit-transform: rotate(0deg);
+          transform: rotate(0deg);
+}
+
+/*SCROLL UP */
+.toTop {
+  text-align: right;
+}
+
+a.scrollup, a:hover.scrollup, a.scrollup::before {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 40px;
+  height: 40px;
+  background: url(../images/scrollup.png) no-repeat center center !important;
+  bottom: 25px;
+  position: fixed;
+  right: 25px;
+  text-indent: -9999px;
+  text-decoration: none;
+  padding: 0px 0px;
+  color: var(--blue-color);
+  z-index: 10;
+}
+
+.introSection {
+  margin-top: -120px;
+}
+
+.introSection .item {
+  padding: 100px;
+}
+
+.introSection .intro-box {
+  position: relative;
+  top: -83px;
+  left: 37px;
+  float: right;
+  background-color: var(--white-color);
+  padding: 0px;
+}
+
+.introSection h1 {
+  margin-bottom: 0px;
+  line-height: 65px;
+  height: 83px;
+}
+
+@media screen and (min-width: 1400px) {
+  .introSection {
+    margin-top: -120px;
+  }
+  .introSection .item {
+    padding: 50px;
+  }
+}
+
+@media screen and (max-width: 1199px) {
+  .introSection h1 {
+    line-height: 40px;
+    height: 51px;
+  }
+  .introSection .intro-box {
+    top: -50px;
+    left: 25px;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .introSection {
+    margin-top: -20px;
+  }
+  .introSection .item {
+    padding: 50px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .introSection {
+    margin-top: 45px;
+  }
+  .introSection .item {
+    padding: 0px;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .introSection h1 {
+    line-height: 23px;
+    height: 29px;
+  }
+  .introSection .intro-box {
+    top: -28px;
+    left: 15px;
+  }
+}
+
 .experience {
   background: url(../images/background-waves.png) no-repeat;
   background-position-x: right;
@@ -461,6 +658,7 @@ a:hover, a:focus {
 @media screen and (max-width: 1199px) {
   .experience {
     background-position-y: 0%;
+    background-size: 70px;
   }
 }
 
@@ -481,11 +679,11 @@ a:hover, a:focus {
   .experience .container {
     text-align: left !important;
   }
-  .experience {
-    background-size: 100px;
-  }
   .overlay-nav .menu-item {
     font-size: 20px;
+  }
+  .experience .discover {
+    bottom: -10px !important;
   }
 }
 
@@ -531,6 +729,12 @@ a:hover, a:focus {
   letter-spacing: inherit;
 }
 
+@media screen and (max-width: 1199px) {
+  .joinHospitality {
+    background-size: 70px;
+  }
+}
+
 @media screen and (max-width: 991px) {
   .joinHospitality .joinHospitality-box .title {
     font-family: var(--fontBold);
@@ -551,7 +755,7 @@ a:hover, a:focus {
 @media screen and (max-width: 575px) {
   .joinHospitality {
     background-position-y: 0%;
-    background-size: 100px;
+    background-size: 70px;
   }
   .joinHospitality .col-12 {
     -webkit-box-orient: vertical;
@@ -574,10 +778,11 @@ a:hover, a:focus {
   background: url(../images/background-gold.png) no-repeat;
   background-position-x: right;
   background-position-y: top;
+  background-size: 150px;
 }
 
 .hospitalityCategories .hospitalityCategoriesLogo {
-  width: 180px;
+  width: 140px;
 }
 
 @media screen and (max-width: 991px) {
@@ -585,14 +790,14 @@ a:hover, a:focus {
     padding-top: 60px;
   }
   .hospitalityCategories .hospitalityCategoriesLogo {
-    width: 130px;
+    width: 120px;
   }
 }
 
 @media screen and (max-width: 575px) {
   .hospitalityCategories {
     padding-top: 20px;
-    background-size: 100px;
+    background-size: 70px;
   }
 }
 
@@ -600,6 +805,7 @@ a:hover, a:focus {
   padding-top: 120px;
   overflow-x: hidden;
   background: url(../images/backgroundWaves-White.png) no-repeat right top;
+  background-size: 400px;
 }
 
 .discoverCrete .container {
@@ -694,10 +900,10 @@ a:hover, a:focus {
 
 @media screen and (max-width: 1199px) {
   .discoverCrete .discover {
-    bottom: 52px;
+    bottom: 52px !important;
   }
   .discoverCrete {
-    background-size: 400px;
+    background-size: 300px;
   }
 }
 
@@ -763,6 +969,9 @@ a:hover, a:focus {
     position: static;
     padding: 10px;
   }
+  .discoverCrete .discover {
+    bottom: -5px !important;
+  }
   #tabs .nav-tabs .nav-link {
     font-size: 16px;
     padding: 0px;
@@ -796,19 +1005,19 @@ a:hover, a:focus {
 }
 
 .ourHotels .ourHotelsLogo {
-  width: 300px;
+  width: 280px;
   margin-bottom: 70px;
+}
+
+@media screen and (max-width: 1199px) {
+  .ourHotels {
+    background-size: 70px;
+  }
 }
 
 @media screen and (max-width: 991px) {
   .ourHotels .ourHotelsLogo {
-    width: 250px;
-  }
-}
-
-@media screen and (max-width: 575px) {
-  .ourHotels {
-    background-size: 100px;
+    width: 230px;
   }
 }
 
@@ -961,7 +1170,7 @@ a:hover, a:focus {
     font-size: 16px;
   }
   .newsletter .form-group {
-    width: 300px;
+    width: 350px;
   }
   .newsletter .sendBtn {
     font-size: 16px;
@@ -1057,12 +1266,12 @@ a:hover, a:focus {
 
 .magazineCarousel.owl-carousel .owl-nav .owl-prev {
   background: url(../images/left-arrow.png) no-repeat;
-  left: -3%;
+  left: -50px;
 }
 
 .magazineCarousel.owl-carousel .owl-nav .owl-next {
   background: url(../images/right-arrow.png) no-repeat;
-  right: -4%;
+  right: -50px;
 }
 
 .magazineCarousel.owl-carousel .owl-nav .owl-prev,
@@ -1091,10 +1300,10 @@ a:hover, a:focus {
 
 @media screen and (max-width: 1199px) {
   .magazineCarousel.owl-carousel .owl-nav .owl-prev {
-    left: -2%;
+    left: -35px;
   }
   .magazineCarousel.owl-carousel .owl-nav .owl-next {
-    right: -4%;
+    right: -35px;
   }
 }
 
@@ -1258,209 +1467,6 @@ a:hover, a:focus {
   .genericCarousel.owl-carousel .owl-nav .owl-next {
     right: 20px;
   }
-}
-
-.header {
-  padding: 20px 30px 0px;
-}
-
-.header .languages {
-  font-family: var(--fontLight);
-}
-
-.header .languages a {
-  font-size: 18px;
-  color: var(--blue-color);
-}
-
-.header .header_btn {
-  position: relative;
-}
-
-.header .header_btn::after, .header .header_btn::before {
-  position: absolute;
-  content: '';
-  height: 10px;
-  margin: 0 auto;
-  left: 0;
-  right: 0;
-  width: 50%;
-  text-align: center;
-  background: url(../images/menu-wave.png) no-repeat;
-  -webkit-transition: .5s;
-  transition: .5s;
-}
-
-.header .header_btn::before {
-  top: 0px;
-}
-
-.header .header_btn::after {
-  bottom: -10px;
-}
-
-.header .bigLogo {
-  width: 80px;
-}
-
-@media screen and (max-width: 991px) {
-  .header .bigLogo {
-    width: 65px;
-  }
-}
-
-.introSection {
-  margin-top: -120px;
-}
-
-.introSection .item {
-  padding: 100px;
-}
-
-.introSection .intro-box {
-  position: relative;
-  top: -83px;
-  left: 37px;
-  float: right;
-  background-color: var(--white-color);
-  padding: 0px;
-}
-
-.introSection h1 {
-  margin-bottom: 0px;
-  line-height: 65px;
-  height: 83px;
-}
-
-@media screen and (min-width: 1400px) {
-  .introSection {
-    margin-top: -120px;
-  }
-  .introSection .item {
-    padding: 50px;
-  }
-}
-
-@media screen and (max-width: 1199px) {
-  .introSection h1 {
-    line-height: 40px;
-    height: 51px;
-  }
-  .introSection .intro-box {
-    top: -50px;
-    left: 25px;
-  }
-}
-
-@media screen and (max-width: 991px) {
-  .introSection {
-    margin-top: -20px;
-  }
-  .introSection .item {
-    padding: 50px;
-  }
-}
-
-@media screen and (max-width: 767px) {
-  .introSection {
-    margin-top: 45px;
-  }
-  .introSection .item {
-    padding: 0px;
-  }
-}
-
-@media screen and (max-width: 575px) {
-  .introSection h1 {
-    line-height: 23px;
-    height: 29px;
-  }
-  .introSection .intro-box {
-    top: -28px;
-    left: 15px;
-  }
-}
-
-.bookingRow form {
-  color: var(--blue-color);
-  font-family: var(--fontBold);
-  font-size: 22px;
-  border: none;
-}
-
-.bookingRow form select {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  -ms-appearance: none;
-  appearance: none !important;
-  outline: 0;
-  -webkit-box-shadow: none;
-          box-shadow: none;
-  border: 0 !important;
-  background: transparent;
-  color: var(--blue-color);
-  font-size: 22px;
-  padding-left: 10px;
-  display: none !important;
-  border: none;
-  cursor: pointer;
-}
-
-.bookingRow .field {
-  cursor: pointer;
-}
-
-.bookingRow label {
-  cursor: pointer;
-}
-
-.bookingRow .rotated-field {
-  -webkit-transform: rotate(-90deg);
-          transform: rotate(-90deg);
-  -webkit-transition: all .3s linear;
-  transition: all .3s linear;
-}
-
-.bookingRow .rotated-field input {
-  display: none;
-}
-
-.bookingRow .hover-removeRotation select {
-  display: inline-block !important;
-}
-
-.bookingRow .hover-removeRotation input {
-  display: inline-block !important;
-}
-
-.bookingRow .hover-removeRotation {
-  -webkit-transform: rotate(0deg);
-          transform: rotate(0deg);
-}
-
-/*SCROLL UP */
-.toTop {
-  text-align: right;
-}
-
-a.scrollup, a:hover.scrollup, a.scrollup::before {
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  width: 40px;
-  height: 40px;
-  background: url(../images/scrollup.png) no-repeat center center !important;
-  bottom: 25px;
-  position: fixed;
-  right: 25px;
-  text-indent: -9999px;
-  text-decoration: none;
-  padding: 0px 0px;
-  color: var(--blue-color);
-  z-index: 10;
 }
 
 .viewAlsoSection {
