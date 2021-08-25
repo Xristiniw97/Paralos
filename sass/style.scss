@@ -547,6 +547,10 @@ a:hover,a:focus {
     transform: rotate(0deg);
 }
 
+.bookingRow a[type=submit]{
+    appearance: none !important;
+}
+
 /*SCROLL UP */
 .toTop {
     text-align: right;
