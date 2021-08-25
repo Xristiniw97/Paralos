@@ -201,13 +201,11 @@ body.mainPages {
 a {
   text-decoration: none;
   cursor: pointer;
-  -webkit-transition: .5s linear;
-  transition: .5s linear;
 }
 
 a:hover, a:focus {
-  text-decoration: underline;
   color: inherit;
+  text-decoration: none;
 }
 
 .bookBtn {
@@ -528,6 +526,9 @@ a:hover, a:focus {
   font-family: var(--fontBold);
   font-size: 22px;
   line-height: 30px;
+  text-transform: initial;
+  margin-bottom: 0;
+  letter-spacing: inherit;
 }
 
 @media screen and (max-width: 991px) {
@@ -844,6 +845,9 @@ a:hover, a:focus {
   font-family: var(--fontRegular);
   color: var(--white-color);
   font-size: 32px;
+  text-transform: initial;
+  margin-bottom: 0;
+  letter-spacing: inherit;
 }
 
 .magazine .magazine-box .title span {
@@ -878,6 +882,10 @@ a:hover, a:focus {
     font-size: 16px;
     line-height: 24px;
   }
+}
+
+.newsletter {
+  margin-top: 80px;
 }
 
 .newsletter form {
@@ -1202,6 +1210,13 @@ a:hover, a:focus {
   .introCarousel.owl-carousel.owl-drag .owl-item {
     padding: 0px 10px;
   }
+}
+
+.genericCarousel.owl-carousel .item {
+  background-repeat: no-repeat !important;
+  background-size: cover !important;
+  background-position: center center !important;
+  height: 80vh;
 }
 
 .genericCarousel.owl-carousel .owl-nav .owl-prev {
@@ -1535,8 +1550,22 @@ a.scrollup, a:hover.scrollup, a.scrollup::before {
   }
 }
 
+@media screen and (max-width: 480px) {
+  .viewAlsoSection .title {
+    font-size: 28px;
+    line-height: 40px;
+  }
+}
+
+.servicesPage .item {
+  background-repeat: no-repeat !important;
+  background-size: cover !important;
+  background-position: center center !important;
+  height: 700px;
+}
+
 .servicesPage .discover {
-  right: 15px;
+  right: 10px;
 }
 
 .servicesPage .title {
@@ -1544,10 +1573,12 @@ a.scrollup, a:hover.scrollup, a.scrollup::before {
   font-size: 22px;
   line-height: 30px;
   background: var(--white-minOpacity);
-  width: 300px;
+  width: 70%;
   padding: 20px 10px;
   position: relative;
-  left: -30px;
+  left: -45px;
+  letter-spacing: 1.5px;
+  text-transform: initial;
   cursor: pointer;
   -webkit-transition: .3s linear;
   transition: .3s linear;
@@ -1566,10 +1597,10 @@ a.scrollup, a:hover.scrollup, a.scrollup::before {
 
 .servicesPage .item p {
   background: var(--white-color);
-  width: 375px;
+  width: 415px;
   position: absolute;
   bottom: -20px;
-  left: 50px;
+  left: 45px;
 }
 
 .bgWaves {
@@ -1591,8 +1622,18 @@ a.scrollup, a:hover.scrollup, a.scrollup::before {
     height: 600px !important;
   }
   .servicesPage .item p {
-    width: 300px;
     left: 48px;
+    width: 340px;
+  }
+  .servicesPage .title {
+    width: 80%;
+  }
+  .servicesPage .discover {
+    right: 20px;
+    bottom: 35px;
+  }
+  .bgWaves, .bgWaves:last-child {
+    background-size: 70px;
   }
 }
 
@@ -1601,13 +1642,11 @@ a.scrollup, a:hover.scrollup, a.scrollup::before {
     height: 550px !important;
   }
   .servicesPage .item p {
-    left: 128px;
-  }
-  .servicesPage .discover {
-    right: 100px;
+    left: 45px;
   }
   .servicesPage .title {
-    left: 0px;
+    left: -40px;
+    width: 50%;
   }
 }
 
@@ -1621,6 +1660,9 @@ a.scrollup, a:hover.scrollup, a.scrollup::before {
   .servicesPage .item p {
     left: 45px;
   }
+  .servicesPage .title {
+    width: 65%;
+  }
 }
 
 @media screen and (max-width: 575px) {
@@ -1631,8 +1673,9 @@ a.scrollup, a:hover.scrollup, a.scrollup::before {
     bottom: 0px !important;
   }
   .servicesPage .item p {
-    left: 15px;
-    bottom: 20px;
+    left: 14px;
+    bottom: 30px;
+    width: 265px;
   }
   .servicesPage .item {
     height: 450px !important;
@@ -1640,20 +1683,31 @@ a.scrollup, a:hover.scrollup, a.scrollup::before {
   .servicesPage .item {
     padding-top: 20px;
   }
-  .bgWaves {
+  .bgWaves, .bgWaves:last-child {
     padding-top: 10px;
-    background-position-x: right;
     background-position-y: top;
   }
+  .bgWaves {
+    background-position-x: right;
+  }
   .bgWaves:last-child {
-    padding-top: 10px;
     background-position-x: left;
-    background-position-y: top;
+  }
+  .servicesPage .title {
+    left: -5px;
+    width: 55%;
   }
 }
 
 .hotelsPage {
   position: relative;
+}
+
+.hotelsPage .container {
+  background-repeat: no-repeat !important;
+  background-size: cover !important;
+  background-position: center center !important;
+  height: 800px;
 }
 
 .hotelsPage .hotel-irini {
@@ -1672,28 +1726,30 @@ a.scrollup, a:hover.scrollup, a.scrollup::before {
   background: url(../images/Logos/L.svg) no-repeat;
 }
 
+.hotelsPage .hotel, .hotelsPage .revertHotel {
+  background-position-y: top;
+  padding-bottom: 180px;
+  background-size: 300px;
+}
+
 .hotelsPage .hotel {
-  background-position-x: -30px;
-  background-position-y: center;
-  margin-bottom: 17%;
+  background-position-x: -2%;
 }
 
 .hotelsPage .revertHotel {
-  background-position-x: 105%;
-  background-position-y: center;
-  margin-bottom: 17%;
+  background-position-x: 102%;
 }
 
 .hotelsPage .hotel-box {
   background: var(--white-color);
   width: 60%;
   position: absolute;
-  right: -200px;
+  right: -2%;
   bottom: -25%;
 }
 
 .hotelsPage .revertHotel .hotel-box {
-  left: -200px;
+  left: -2%;
 }
 
 .hotelsPage .hotel-box .h1 {
@@ -1709,5 +1765,100 @@ a.scrollup, a:hover.scrollup, a.scrollup::before {
 
 .hotelsPage .revertHotel .discover {
   right: -40px;
+}
+
+@media screen and (max-width: 1500px) {
+  .hotelsPage .container {
+    height: 700px !important;
+  }
+  .hotelsPage .hotel, .hotelsPage .revertHotel {
+    background-position-y: 100%;
+    background-size: 100px;
+    padding-bottom: 220px;
+  }
+  .hotelsPage .hotel {
+    background-position-x: 0%;
+  }
+  .hotelsPage .revertHotel {
+    background-position-x: 100%;
+  }
+  .hotelsPage .hotel .discover {
+    bottom: 230px;
+  }
+}
+
+@media screen and (max-width: 1199px) {
+  .hotelsPage .hotel-box .h1 {
+    height: 115px;
+    line-height: 55px;
+  }
+  .hotelsPage .hotel .discover {
+    bottom: 180px;
+    right: -25px;
+  }
+  .hotelsPage .revertHotel .discover {
+    right: -25px;
+    bottom: 35px;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .hotelsPage .container {
+    height: 500px !important;
+  }
+  .hotelsPage .hotel-box {
+    width: 80%;
+    bottom: -50%;
+  }
+  .hotelsPage .hotel .discover {
+    bottom: 106px;
+    right: -22px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .hotelsPage .hotel .discover, .hotelsPage .revertHotel .discover {
+    right: -65px;
+    bottom: 100px !important;
+    -webkit-transform: rotate(-90deg);
+            transform: rotate(-90deg);
+  }
+  .hotelsPage .revertHotel .discover {
+    bottom: 45px !important;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .hotelsPage .revertHotel .discover {
+    right: unset;
+    bottom: -50% !important;
+    left: 20px;
+  }
+  .hotelsPage .hotel .discover {
+    bottom: -50% !important;
+    right: 20px;
+  }
+  .hotelsPage .hotel-box {
+    right: 0%;
+    width: 100%;
+    bottom: -40%;
+  }
+  .hotelsPage .revertHotel .hotel-box {
+    left: 0%;
+  }
+  .hotelsPage .hotel, .hotelsPage .revertHotel {
+    background-position-y: 0%;
+    padding-top: 100px;
+    background-size: 50px;
+    padding-bottom: 240px;
+    margin-top: 0px;
+  }
+  .hotelsPage .hotel-box .h1 {
+    height: 70px;
+    line-height: 35px;
+  }
+  .hotelsPage .container {
+    height: 400px !important;
+  }
 }
 /*# sourceMappingURL=style.css.map */
