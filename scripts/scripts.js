@@ -1,8 +1,5 @@
-
-
 $(document).ready(function() {
 
-  
       // .scroll() creates an event when the user scrolls
       $(window).scroll(function () {
 
@@ -10,7 +7,6 @@ $(document).ready(function() {
         var scroll = $(window).scrollTop();
         var navOverlay=$('.overlay-nav');
             
-
         if (scroll > 200 || navOverlay.hasClass("reveal-nav")) {
             $('#main-navbar').addClass('displayNav');
         } else {
@@ -18,33 +14,48 @@ $(document).ready(function() {
         }
     });
 
-
+    // INTROCAROUSEL
     $('.introCarousel').owlCarousel({
-      loop: false,
+      loop: true,
       responsiveClass: true,
       margin:0,
+      autoplay: true,
+      autoplaySpeed: 1000,
+      autoplayTimeout: 6000,
+      autoplayHoverPause: true,
+      slideTransition: 'linear',
       nav: true,
       navText: ["", ""],
       dots: false,
       items: 1
     });
 
+    // GENERIC CAROUSEL 
     $('.genericCarousel').owlCarousel({
-      loop: false,
+      loop: true,
       responsiveClass: true,
       margin:0,
+      autoplay: true,
+      autoplaySpeed: 1000,
+      autoplayTimeout: 6000,
+      autoplayHoverPause: true,
+      slideTransition: 'linear',
       nav: true,
       navText: ["", ""],
       dots: false,
       items: 1
     });
 
-   
-
+    // MAGAZINE CAROUSEL 
     $('.magazineCarousel').owlCarousel({
-      loop: false,
+      loop: true,
       responsiveClass: true,
       margin:0,
+      autoplay: true,
+      autoplaySpeed: 1000,
+      autoplayTimeout: 5000,
+      autoplayHoverPause: true,
+      slideTransition: 'linear',
       nav: true,
       navText: ["", ""],
       dots: false,
@@ -61,7 +72,6 @@ $(document).ready(function() {
         }
       }
     });
-
 
     /*Scroll to top*/
     $(window).scroll(function(){

@@ -1487,11 +1487,17 @@ a.scrollup, a:hover.scrollup,a.scrollup::before {
 
 .backgroundBig {
     background: url(../images/background-big.png) no-repeat;
-    background-size: 850px;
+    background-size:850px;
     background-position-x: right;   
     padding-top: 120px;
 }
 //RESPONSIVE TEXTPAGE
+@media screen and (max-width: 1199px) {
+    .backgroundBig {
+        padding-top: 100px;
+        background-size: 800px;
+    }
+}
 @media screen and (max-width: 991px) {
     .backgroundBig {
         padding-top: 60px;
@@ -1790,10 +1796,12 @@ a.scrollup, a:hover.scrollup,a.scrollup::before {
         right: unset;
         bottom: -50% !important;
         left: 20px;
+        transform: none;
     }
     .hotelsPage .hotel .discover {
         bottom: -50% !important;
         right: 20px;
+        transform: none;
     }
     .hotelsPage .hotel-box {
         right: 0%;
